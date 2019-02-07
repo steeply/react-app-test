@@ -72,7 +72,7 @@ class EditPage extends Component {
     const { id } = this.state;
 
     return (
-      <div>
+      <React.Fragment>
         <h1>{_.isUndefined(id) ? 'Новая модель' : `Редактирование модели (id: ${id})`}</h1>
 
         <button onClick={homePage}>
@@ -210,7 +210,7 @@ class EditPage extends Component {
           )}
         />
 
-      </div>
+      </React.Fragment>
     );
   }
 }

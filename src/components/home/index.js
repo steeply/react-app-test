@@ -18,14 +18,14 @@ class Home extends Component {
   };
 
   componentDidCatch = (error, info) => {
-    console.log('Error', error, info);
+    console.error(error, info);
     // this.props.loggerService({ error, info });
   };
 
   render() {
     const { modelsList, newPage, isLoading } = this.props;
     return (
-      <div>
+      <React.Fragment>
         <h1>Список моделей</h1>
         <p>
           <button
@@ -58,7 +58,7 @@ class Home extends Component {
           }
           minRows={3}
         />
-      </div>
+      </React.Fragment>
     );
   }
 }
